@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   get '/', to: 'products#index'
-  post '/products', to: 'products#add'
+  post '/products/:id/add', to: 'products#add'
 end
