@@ -2,10 +2,10 @@
   <li><%= product %></li>
 <% end %>
 
-<h3>Add items to cart</h3>
-<%= form_tag products_path do %>
-  <label>Name of product:</label><br>
-  <%= text_field_tag :product %><br>
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
 
-  <%= submit_tag "add to cart" %>
+  <input name=product>
+  <input type=submit value='add to cart'>
 <% end %>
